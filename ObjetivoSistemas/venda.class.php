@@ -38,6 +38,8 @@ class Venda extends Produto {
             $this->desconto = 0; 
         }
         
+        //Atualização da quantidade de produtos no estoque após a venda.
+        
         $arrProdutoCadastrado["quantidade"] -= $this->quantidade;
         $this->setProduto($arrProdutoCadastrado);
         

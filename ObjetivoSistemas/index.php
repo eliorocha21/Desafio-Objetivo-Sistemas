@@ -11,4 +11,4 @@ $venda->setProduto(array(
     "quantidade" => 5
 ));
 
-$venda->setVenda("Acarajé congelado", 3); // Venda de 1 unidade sem desconto
+$venda->setVenda("Acarajé congelado", 2); // Venda de 1 unidade sem desconto
