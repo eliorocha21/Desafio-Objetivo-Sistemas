@@ -1,7 +1,6 @@
 <?php
 //PONTO DE VENDA PARA O MERCADINHO JWT
-class Produto
-{
+class Produto{
 
     //criação da classe responsável pelo cadastro de produtos
 
