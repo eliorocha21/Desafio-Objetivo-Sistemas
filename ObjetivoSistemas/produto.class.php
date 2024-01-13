@@ -1,6 +1,7 @@
 <?php
 //PONTO DE VENDA PARA O MERCADINHO JWT
-class Produto {
+class Produto
+{
 
     //criação da classe responsável pelo cadastro de produtos
 
@@ -10,12 +11,14 @@ class Produto {
 
     /* Criação de método setProduto que configura os atributos do produto com base em um array de dados, enquanto getProduto retorna esses dados.*/
 
-    public function setProduto($data) {
+    public function setProduto($data)
+    {
         $this->nome = $data["nome"];
         $this->preco = $data["preco"];
         $this->quantidade = $data["quantidade"];
     }
-    public function getProduto() {
+    public function getProduto()
+    {
         return array(
             "nome" => $this->nome,
             "preco" => $this->preco,
