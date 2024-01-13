@@ -15,5 +15,11 @@ class Venda extends Produto {
             echo "<span style=\"color: red;\">Produto não cadastrado.</span>";
             exit;
         }
+        
+        //2 - Valida o estoque
+        if($qtdDesejada > $arrProdutoCadastrado["quantidade"]) {
+            echo "<span style=\"color: red;\">Estoque insuficiente.</span>";
+            exit;
+        }
     }
 }
