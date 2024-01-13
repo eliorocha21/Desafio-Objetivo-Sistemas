@@ -23,10 +23,21 @@ class Venda extends Produto {
         }
 
         //3 - Lançar venda
+        /*subtrai a quantidade desejada pelo cliente  da quantidade atual do produto, atualiza o estoque
+        e mostra a quantidade após a venda*/
         $arrProdutoCadastrado["quantidade"] = $arrProdutoCadastrado["quantidade"] -$qtdDesejada; 
         $this->setProduto($arrProdutoCadastrado);
-        /*subtrai a quantidade desejada pelo cliente
-        da quantidade atual do produto, atualiza o estoque
-        e mostra a quantidade após a venda*/
+        
+        //4 - Exibe os dados da venda com o estoque atualizado
+        $this->getVenda();
     }
+
+        public function getVenda() {
+            $arrProdutoCadastrado = $this->getProduto();
+            echo "Venda realizada com sucesso em: " . date("d/m/Y H:i:s");
+            echo "<br />";
+            echo "Estoque atual do produto: " . $arrProdutoCadastrado["quantidade"];
+
+        /*Método getVenda para exibir informações sobre venda realizada, a data e hora da venda e o estoque atualizado do produto. São informações apresentadas na saida de dados para fornecer feedback ao usuário*/
+        }
 }
