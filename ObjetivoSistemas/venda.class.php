@@ -1,5 +1,9 @@
 <?php
 
+//Importa a classe Produto contida no arquivo produto.class.php"
+
+require_once("Produto.class.php");
+
 /*Criação da classe venda que herda os atributos
 da Classe Produto e as variáveis  quantidade e desconto*/
 
@@ -25,6 +29,7 @@ class Venda extends Produto {
         //3 - Lançar venda
         /*subtrai a quantidade desejada pelo cliente  da quantidade atual do produto, atualiza o estoque
         e mostra a quantidade após a venda*/
+        
         $arrProdutoCadastrado["quantidade"] = $arrProdutoCadastrado["quantidade"] -$qtdDesejada; 
         $this->setProduto($arrProdutoCadastrado);
         
