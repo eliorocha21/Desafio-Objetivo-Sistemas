@@ -21,5 +21,12 @@ class Venda extends Produto {
             echo "<span style=\"color: red;\">Estoque insuficiente.</span>";
             exit;
         }
+
+        //3 - Lançar venda
+        $arrProdutoCadastrado["quantidade"] = $arrProdutoCadastrado["quantidade"] -$qtdDesejada; 
+        $this->setProduto($arrProdutoCadastrado);
+        /*subtrai a quantidade desejada pelo cliente
+        da quantidade atual do produto, atualiza o estoque
+        e mostra a quantidade após a venda*/
     }
 }
